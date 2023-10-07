@@ -25,6 +25,7 @@ const gracefulShutdown = () => {
     db.teardown()
         .catch(() => {})
         .then(() => process.exit());
+    
 };
 
 process.on('SIGINT', gracefulShutdown);
